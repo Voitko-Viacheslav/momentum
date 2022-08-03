@@ -1,0 +1,75 @@
+@import "normalize";
+
+body {
+  margin: 0 auto;
+  background-color: rgb(117, 78, 154);
+}
+
+.momentum {
+  display: flex;
+  max-width: 1920px;
+  height: 936px;
+}
+.momentum-container {
+  background: green;
+  width: 100%;
+  padding: 20px;
+}
+
+.header {
+  height: 33.3%;
+  background-color: brown;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  height: 33.3%;
+  background-color: yellowgreen;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.time {
+  font-size: 100px;
+  line-height: 120px;
+  color: white;
+}
+
+.date {
+  font-size: 30px;
+  line-height: 40px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.greeting {
+  font-size: 50px;
+  line-height: 60px;
+  color: white;
+}
+
+.name {
+  width: 250px;
+  padding: 10px;
+  font-size: 40px;
+  color: #fff;
+  background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+.footer {
+  height: 33.3%;
+  background-color: yellow;
+}
