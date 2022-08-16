@@ -379,3 +379,41 @@ body {
     padding: 5px;
   }
 }
+
+/* Start ToDo */
+.footer {
+  display: flex;
+}
+
+.to-do {
+  background-color: rgb(77, 85, 62);
+  opacity: 0.7;
+  width: 400px;
+}
+
+.to-do-list {
+  padding-left: 15px;
+  list-style: none;
+}
+
+.to-do-list li::before {
+  content: "\2713"; 
+  padding-right: 5px;
+}
+
+.to-do-li {
+  color: greenyellow;
+}
+
+.to-do-li-button {
+  color: #fff;
+  background-color: #000;
+  border: none;
+  padding: 2px;
+  margin-left: 5px;
+}
+
+.li-through {
+  text-decoration: line-through;
+}
+/* End ToDo */
