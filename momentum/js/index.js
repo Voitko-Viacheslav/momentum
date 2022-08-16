@@ -512,6 +512,18 @@ setInterval(updateTime, 1000);
 // End Part 7 Advanced  Audio Player
 
 
+// Start Part 9 Getting background image from API
+// https://api.unsplash.com/photos/random?orientation=landscape&query=nature&client_id=e2077ad31a806c894c460aec8f81bc2af4d09c4f8104ae3177bb809faf0eac17
+
+  // async function getLinkToImage() {
+  //   const url = 'https://api.unsplash.com/photos/random?orientation=landscape&query=nature&client_id=5NpmFaHaMk5xFUKc2LXOHoHFy3j0DZWHX6Chcq9wYOs';
+  //   const res = await fetch(url);
+  //   const data = await res.json();
+  //   console.log(data.urls.regular)
+  //  }
+  //  getLinkToImage()
+// End Part 9 Getting background image from API
+
 
 // Start Part 10 Application settings
 
@@ -606,17 +618,56 @@ quoteDisplay.addEventListener('click', () => {
 
 
 
+// Start Part 11 Todo
 
+const toDoInput = document.querySelector('.to-do-input');
+const toDoButton = document.querySelector('.to-do-btn')
+const toDoList = document.querySelector('.to-do-list');
+const toDoQuantity = document.querySelector('.quantity');
+let countLi = 0;
 
 
+function creatToDo() {
+  countLi++
+  // создаю li
+  const toDoLi = document.createElement('li');
+  toDoLi.classList.add('to-do-li');
+  toDoLi.textContent = toDoInput.value
+  if (toDoInput.value === '') return
 
+  // создаю кнопку для удаления todo
+  const toDoLiButton = document.createElement('button');
+  toDoLiButton.classList.add('to-do-li-button')
+  toDoLiButton.textContent = 'remove';
+  // Добавляю кнопку в li
+  toDoLi.appendChild(toDoLiButton);
 
+  // удаляю todo
+  toDoLiButton.addEventListener('click', () =>{
+    toDoList.removeChild(toDoLi);
+    countLi--;
+    toDoQuantity.textContent = countLi;
+  })
 
+   // зачеркиваю li
+   toDoLi.addEventListener('click', () =>{
+    toDoLi.classList.toggle('li-through');
+  })
 
+  // Добавляю в список li
+  toDoList.appendChild(toDoLi)
+  toDoInput.value = ''
 
+  // Total
+  toDoQuantity.textContent = countLi;
+ 
+}
 
+// событие на кнопку
+toDoButton.addEventListener('click', creatToDo)
 
 
+// End Part 11 Todo
 
 
 
@@ -632,153 +683,10 @@ quoteDisplay.addEventListener('click', () => {
 
 
 
-// // Start Part 6 Audio Player
-// const audio = document.querySelector('.audio');
 
-// const play = document.querySelector('.play');
-// const playPrev = document.querySelector('.play-prev');
-// const playNext = document.querySelector('.play-next');
 
-// const playListMusic = document.querySelector('.play-list')
-// // const playListContainer = document.querySelector('.player-controls');
 
 
-// const songs = ['Aqua Caelestis', 'Ennio Morricone',
-// 'River Flows In You', 'Summer Wind']; 
 
-// let songIndex = 0;
 
-
-// function loadSong(song) {
-//   playListMusic.innerHTML = song;
-//   audio.src = `./assets/sounds/${song}.mp3`;
-  
-//   // const li = document.createElement('li');
-//   // li.classList.add('.play-item');
-//   // li.innerHTML = song;
-//   // // playListMusic.append(songs[0]);
-//   // audio.src = `./assets/sounds/${song}.mp3`;
-  
-//   // for(let i = 0; i < songs.length; i++) {
-//   //   playListMusic.append(songs[i]);
-//   // }
-// }
-// loadSong(songs[songIndex]);
-
-
-// function playAudio() {
-//   audio.currentTime = 0;
-//   audio.play();
-// }
-
-// function pauseAudio() {
-//   audio.pause();
-// }
-
-// let isPlay = false;
-
-// function checkSound() {
-//   if(isPlay == false) {
-//     playAudio();
-//     isPlay = true;
-//   } else if (isPlay == true) {
-//     pauseAudio()
-//     isPlay = false;
-//   }
-// }
-
-
-// function toggleBtn() {
-//   play.classList.toggle('pause');
-//   checkSound()
-// }
-// play.addEventListener('click', toggleBtn);
-
-
-
-
-// function nextSong() {
-//   songIndex ++;
-
-//   if (songIndex > songs.length - 1) {
-//     songIndex = 0;
-//   }
-//   loadSong(songs[songIndex]);
-//   playAudio();
-// }
-
-// playNext.addEventListener('click', nextSong);
-
-
-
-// function prevSong() {
-//   songIndex --;
-
-//   if (songIndex < 0) {
-//     songIndex = songs.length - 1;
-//   }
-//   loadSong(songs[songIndex]);
-//   playAudio();
-// }
-
-// playPrev.addEventListener('click', prevSong);
-
-
-
-
-
-
-
-
-
-
-// // let isPlay = false;
-
-// // function playAudio() {
-// //   audio.currentTime = 0;
-// //   audio.play();
-// // }
-
-// // function pauseAudio() {
-// //   audio.pause();
-// // }
-
-// // function checkSound() {
-// //   if(isPlay == false) {
-// //     playAudio();
-// //     isPlay = true;
-// //   } else if (isPlay == true) {
-// //     pauseAudio()
-// //     isPlay = false;
-// //   }
-// // }
-
-// // function toggleBtn() {
-// //   play.classList.toggle('pause');
-// //   checkSound();
-// // }
-// // play.addEventListener('click', toggleBtn);
-
-
-
-// // let playNum = 0;
-
-// // function playNextMusic() {
-// //   audio.src = playList[playNum].src;
-// // }
-
-// // function playPrevMusic() {
-
-// // }
-
-// // const li = document.createElement('li');
-// // li.classList.add('.play-item');
-// // li.textContent = playList.title;
-
-// // for(let i = 0; i < playListMusic.length; i++) {
-// //   playListMusic.append('li')[i];
-// // }
-
-
-// // End Part 6 Audio Player
 
