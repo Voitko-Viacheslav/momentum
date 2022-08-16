@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="./css/owfont-regular.css" />
+  <link rel="stylesheet" href="./css/index.css">
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+
+    <div class="wrapper-for-player">
+      <div class="player">
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div>
+        <ul class="play-list"></ul>
+        <audio class="audio" src="./assets/sounds/Aqua Caelestis.mp3" controls></audio>
+      </div>
+
+      <div class="my-player">
+        <audio class="my-player-audio" src="./assets/sounds/Aqua Caelestis.mp3"></audio>
+        <div class="song"></div>
+        <div class="my-controls">
+          <button class="play-prev-btn player-icon"></button>
+          <button class="play-btn player-icon"></button>
+          <button class="play-next-btn player-icon"></button>
+          <div class="progress-container">
+            <div class="progress"></div>
+          </div>
+        </div>
+
+        <div class="wrapper-time-music">
+          <span class="play-time">0:00</span>
+          <span class="current-play-time">0:00</span>
+        </div>
+
+        <ul class="my-play-list"></ul>
+      </div>
+    </div>
+    <!-- application settings -->
+    <div class="application-settings">
+    </div>
+    <table class="table-application-settings" style="width:30%">
+      <tr>
+        <td>language</td>
+        <td><input type="radio" name="language" value="En" checked>En</td>
+        <td><input type="radio" name="language" value="Ru">Ru<td>
+      </tr>
+      <tr>
+        <td>image</td>
+        <td><input type="radio" name="image" value="GitHub" checked>GitHub</td>
+        <td><input type="radio" name="image" value="Unsplash API">Unsplash API</td>
+        <td><input type="radio" name="image" value="Flickr API">UFlickr API</td>
+      </tr>
+      <tr>
+        <td>standart player</td>
+        <td><input class="standart-player-hide" type="radio" name="player" value="hide">hide</td>
+        <td><input class="standart-player-display" checked type="radio" name="player" value="display">display</td>
+      </tr>
+      <tr>
+        <td>my player</td>
+        <td><input class="my-player-hide" type="radio" name="my player" value="hide">hide</td>
+        <td><input class="my-player-display" checked type="radio" name="my player" value="display">display</td>
+      </tr>
+      <tr>
+        <td>weather</td>
+        <td><input class="weather-hide" type="radio" name="weather" value="hide">hide</td>
+        <td><input class="weather-display" checked type="radio" name="weather" value="display">display</td>
+      </tr>
+      <tr>
+        <td>time</td>
+        <td><input class="time-hide" type="radio" name="time" value="hide">hide</td>
+        <td><input class="time-display"  checked type="radio" name="time" value="display">display</td>
+      </tr>
+      <tr>
+        <td>date</td>
+        <td><input class="date-hide" type="radio" name="date" value="hide">hide</td>
+        <td><input class="date-display" checked type="radio" name="date" value="display">display</td>
+      </tr>
+      <tr>
+        <td>greeting</td>
+        <td><input class="greeting-hide" type="radio" name="greeting" value="hide">hide</td>
+        <td><input class="greeting-display" checked type="radio" name="greeting" value="display">display</td>
+      </tr>
+      <tr>
+        <td>quote</td>
+        <td><input class="quote-hide" type="radio" name="quote" value="hide">hide</td>
+        <td><input class="quote-display" checked type="radio" name="quote" value="display">display</td>
+      </tr>
+    </table>
+ 
+    <div class="weather">
+      <input type="text" class="city" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="wind"></span>
+        <span class="humidity"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name" />
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="quote-wrapper">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+    
+  </footer>
+ 
+<!-- Подключил js с песнями -->
+  <script type="module" src="./playList.js"></script>
+  <script type="module" src="./js/index.js"></script>
+</body>
+</html>
